@@ -9,9 +9,14 @@
   <h3><label for="new_landmark">New Landmark:</label></h3>
   <input id="new_landmark" name="landmark[name]" type="text" />
 
+  <h3><label for="new_title">New Title:</label></h3>
+  <input id="new_title" name="title[name]" type="text" />
+
   <% @titles.each do |title| %>
     <p><%= title.name %> <input id="figure[title_ids]" name="figure[title_ids][]" value="<%= title.id %>" type="checkbox" /></p>
   <% end %>
+
+
 
   <input type="submit" value="Edit Figure" />
 
