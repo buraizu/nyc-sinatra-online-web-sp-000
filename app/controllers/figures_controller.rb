@@ -22,6 +22,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
     @figure.update(params[:figure])
+    binding.pry
   end
 
   post '/figures/new' do
