@@ -22,8 +22,12 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
     @figure.update(params[:figure])
-    @figure.update(params[:landmark])
+    if params[:landmark][:name]
+      landmark = Landmark.create(name: params[:landmark][:name])
+      @figure.landmarks << landmark
+    end
     binding.pry
+    @figure.save
   end
 
   post '/figures/new' do
