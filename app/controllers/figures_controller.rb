@@ -26,7 +26,10 @@ class FiguresController < ApplicationController
       landmark = Landmark.create(name: params[:landmark][:name])
       @figure.landmarks << landmark
     end
-    
+    if params[:title][:name]
+      title = Title.create(name: params[:title][:name])
+      @figure.titles << title
+    end
     @figure.save
   end
 
