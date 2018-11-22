@@ -1,6 +1,22 @@
-<h2>Edit Historical Landmark</h2>
+<h2>Edit <%= @landmark.name %></h2>
 
-<!-- add content here -->
+  <form method="post" action="/landmarks/<%= @landmark.id %>">
+    <input id="hidden" type="hidden" name="_method" value="patch" />
+
+    <h3><label for="landmark_name">New Name:</label></h3>
+    <input id="landmark_name" name="landmark[name]" type="text" />
+
+    <h3><label for="landmark_year_completed">New Year Completed:</label></h3>
+    <input id="landmark_year_completed" name="landmark[year_completed]" type="text" value="<%= @landmark.year_completed %>" />
+
+    
+  </form> 
 
 <a class="button" href="/figures">Landmarks</a>
 <a class="button" href="/">Home</a>
+
+
+<!-- expect(last_response.body).to include('landmark[name]')
+expect(last_response.body).to include('landmark[year_completed]')
+expect(last_response.body).to include(@landmark.name)
+expect(last_response.body).to include(@landmark.year_completed.to_s) -->
