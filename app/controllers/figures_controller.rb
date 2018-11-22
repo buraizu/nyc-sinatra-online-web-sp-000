@@ -22,6 +22,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
     @figure.update(params[:figure])
+    @figure.update(params[:landmark])
     binding.pry
   end
 
@@ -57,3 +58,8 @@ class FiguresController < ApplicationController
   end
 
 end
+
+{"_method"=>"patch",
+ "figure"=>{"name"=>"traitor", "title_ids"=>["4"]},
+ "landmark"=>{"name"=>"PRISON"},
+ "id"=>"2"}
