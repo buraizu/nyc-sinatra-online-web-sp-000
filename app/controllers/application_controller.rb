@@ -70,3 +70,21 @@ class ApplicationController < Sinatra::Base
     erb :'/figures/index'
   end
 end
+
+
+# 
+# <!-- <label for="landmark_name">Name </label> <input id="landmark_name" name="landmark[name]" type="text" />
+# 
+# <label for="figure_titles">Titles</label>
+# 
+# <br></br>
+# 
+# <% @titles.each do |title| %>
+#   <input id="title.id" name="figure[title_ids][]" value="title[name]" type="checkbox" />
+# <% end %>
+# 
+# <br></br>
+# 
+# <% @landmarks.each do |landmark| %>
+#   <input id="landmark[name]" name="figure[landmark_ids][]" type="checkbox" />
+# <% end %> -->
