@@ -2,8 +2,16 @@
 
 <form method="post" action="/landmarks/new">
 
+  <h3><label for="landmark_name">Name:</label></h3>
+  <input id="landmark_name" name="landmark[name]" type="text" />
+
+  <h3><label for="year_completed">Year Completed:</label></h3>
+  <input id="year_completed" name="landmark[year_completed]" type="text" />
 
 </form>
 
 <a class="button" href="/figures">Landmarks</a>
 <a class="button" href="/">Home</a>
+
+<!-- expect(page.body).to include('landmark[name]')
+expect(page.body).to include('landmark[year_completed]') -->
