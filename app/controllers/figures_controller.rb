@@ -67,7 +67,4 @@ class FiguresController < ApplicationController
 
 end
 
-{"_method"=>"patch",
- "figure"=>{"name"=>"traitor", "title_ids"=>["4"]},
- "landmark"=>{"name"=>"PRISON"},
- "id"=>"2"}
+
