@@ -19,6 +19,11 @@ class FiguresController < ApplicationController
     erb :'/figures/edit'
   end
 
+  patch '/figures/:id' do
+    @figure = Figure.find_by_id(params[:id])
+    @figure.update(params[:figure])
+  end
+
   post '/figures/new' do
 
     figure = Figure.create(name: params[:figure][:name])
